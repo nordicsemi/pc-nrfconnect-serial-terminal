@@ -23,10 +23,10 @@ sections:
   - "Editorial changes."
 - name: October 2024
   entries:
-  - "Updated for [nRF Connect Serial Terminal v1.4.2](https://github.com/NordicSemiconductor/pc-nrfconnect-serial-terminal/blob/main/Changelog.md)."
+  - "Updated for [nRF Connect Serial Terminal v1.4.2](https://github.com/nordicsemi/pc-nrfconnect-serial-terminal/blob/main/Changelog.md)."
 - name: January 2024
   entries:
-  - "Updated for [nRF Connect Serial Terminal v1.3.0](https://github.com/NordicSemiconductor/pc-nrfconnect-serial-terminal/blob/main/Changelog.md)."
+  - "Updated for [nRF Connect Serial Terminal v1.3.0](https://github.com/nordicsemi/pc-nrfconnect-serial-terminal/blob/main/Changelog.md)."
 - name: June 2023
   entries:
   - "First release."

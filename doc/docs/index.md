@@ -22,5 +22,5 @@ The Serial Terminal app supports Nordic Semiconductor Development Kits (DKs) and
 
 ## Application source code
 
-The code of the application is open source and [available on GitHub](https://github.com/NordicSemiconductor/pc-nrfconnect-serial-terminal).
+The code of the application is open source and [available on GitHub](https://github.com/nordicsemi/pc-nrfconnect-serial-terminal).
 Feel free to fork the repository and clone it for secondary development or feature contributions.
