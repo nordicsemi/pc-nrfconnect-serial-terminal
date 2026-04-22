@@ -49,43 +49,48 @@ const HistorySettings = () => {
     }, [dispatch]);
 
     return (
-        <Card title="History File">
-            <div className="tw-flex tw-items-center tw-whitespace-nowrap tw-p-1">
-                <div className="tw-pr-2">Current file usage:</div>{' '}
-                {historyUsagePercentage.toFixed(0)}%
-            </div>
-
-            <div
-                title="Set the maximum number of lines to store in the history file"
-                className="tw-flex tw-items-center tw-p-1"
-            >
-                <div className="tw-pr-2">
-                    Max number of lines in history file:
+        <Card>
+            <Card.Header>
+                <Card.Header.Title cardTitle="History File" />
+            </Card.Header>
+            <Card.Body>
+                <div className="tw-flex tw-items-center tw-whitespace-nowrap tw-p-1">
+                    <div className="tw-pr-2">Current file usage:</div>{' '}
+                    {historyUsagePercentage.toFixed(0)}%
                 </div>
-                <NumberInlineInput
-                    className="tw-p-0"
-                    value={newMaximumNumberOfLines}
-                    onChange={setNewMaximumNumberOfLines}
-                    onChangeComplete={size =>
-                        dispatch(setNewMaximumNumberOfLinesInHistory(size))
-                    }
-                    range={{
-                        min: MINIMUM_MAX_NUMER_OF_LINES,
-                        max: MAXIMUM_MAX_NUMBER_OF_LINES,
-                    }}
-                />
-            </div>
 
-            <div
-                title={pathToHistoryFile}
-                className="tw-flex tw-items-center tw-justify-between tw-gap-1 tw-overflow-hidden tw-whitespace-nowrap tw-p-1"
-            >
-                File Location:
-                <FileLink
-                    label={`${pathToHistoryFile}`}
-                    fileLocation={pathToHistoryFile}
-                />
-            </div>
+                <div
+                    title="Set the maximum number of lines to store in the history file"
+                    className="tw-flex tw-items-center tw-p-1"
+                >
+                    <div className="tw-pr-2">
+                        Max number of lines in history file:
+                    </div>
+                    <NumberInlineInput
+                        className="tw-p-0"
+                        value={newMaximumNumberOfLines}
+                        onChange={setNewMaximumNumberOfLines}
+                        onChangeComplete={size =>
+                            dispatch(setNewMaximumNumberOfLinesInHistory(size))
+                        }
+                        range={{
+                            min: MINIMUM_MAX_NUMER_OF_LINES,
+                            max: MAXIMUM_MAX_NUMBER_OF_LINES,
+                        }}
+                    />
+                </div>
+
+                <div
+                    title={pathToHistoryFile}
+                    className="tw-flex tw-items-center tw-justify-between tw-gap-1 tw-overflow-hidden tw-whitespace-nowrap tw-p-1"
+                >
+                    File Location:
+                    <FileLink
+                        label={`${pathToHistoryFile}`}
+                        fileLocation={pathToHistoryFile}
+                    />
+                </div>
+            </Card.Body>
         </Card>
     );
 };
@@ -96,29 +101,34 @@ const TerminalScrollback = () => {
     const [scrollback, setScrollback] = useState(activeScrollback);
 
     return (
-        <Card title="XTerm Scrollback">
-            <p>
-                The Terminal is only able to keep a limited amount of data in
-                its buffer. This amount is still adjustable using the scrollback
-                option below. This will increase/decrease the maximum number of
-                lines that can be kept in the buffer.
-            </p>
-            <div
-                title="Set the number of lines it is possible to scroll in the Terminal"
-                className="tw-flex tw-items-center tw-pt-1"
-            >
-                <div className="tw-pr-2">Scrollback:</div>
-                <NumberInlineInput
-                    value={scrollback}
-                    onChange={setScrollback}
-                    onChangeComplete={() => {
-                        if (scrollback !== activeScrollback) {
-                            dispatch(setActiveScrollback(scrollback));
-                        }
-                    }}
-                    range={{ min: 1, max: 2 ** 64 - 1 }}
-                />
-            </div>
+        <Card>
+            <Card.Header>
+                <Card.Header.Title cardTitle="XTerm Scrollback" />
+            </Card.Header>
+            <Card.Body>
+                <p>
+                    The Terminal is only able to keep a limited amount of data
+                    in its buffer. This amount is still adjustable using the
+                    scrollback option below. This will increase/decrease the
+                    maximum number of lines that can be kept in the buffer.
+                </p>
+                <div
+                    title="Set the number of lines it is possible to scroll in the Terminal"
+                    className="tw-flex tw-items-center tw-pt-1"
+                >
+                    <div className="tw-pr-2">Scrollback:</div>
+                    <NumberInlineInput
+                        value={scrollback}
+                        onChange={setScrollback}
+                        onChangeComplete={() => {
+                            if (scrollback !== activeScrollback) {
+                                dispatch(setActiveScrollback(scrollback));
+                            }
+                        }}
+                        range={{ min: 1, max: 2 ** 64 - 1 }}
+                    />
+                </div>
+            </Card.Body>
         </Card>
     );
 };
