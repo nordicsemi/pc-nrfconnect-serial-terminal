@@ -1,3 +1,9 @@
+## 1.6.3 - 2026-04-23
+
+### Changed
+
+- Maintenance release to update the dependencies.
+
 ## 1.6.2 - 2026-03-10
 
 ### Changed
