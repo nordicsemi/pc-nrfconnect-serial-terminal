@@ -114,7 +114,7 @@ const TerminalScrollback = () => {
                 </p>
                 <div
                     title="Set the number of lines it is possible to scroll in the Terminal"
-                    className="tw-flex tw-items-center tw-pt-1"
+                    className="tw-flex tw-items-center tw-pt-4"
                 >
                     <div className="tw-pr-2">Scrollback:</div>
                     <NumberInlineInput
