@@ -11,7 +11,7 @@ const DocumentationSections = [
     <DocumentationSection
         key="infocenter"
         linkLabel="Go to TechDocs"
-        link="https://docs.nordicsemi.com/bundle/nrf-connect-serial-terminal/page/index.html"
+        link="https://docs.nordicsemi.com/bundle/swtools_docs/page/app/pc-nrfconnect-serial-terminal/index.html"
     >
         Visit our Technical Documentation for more documentation about using the
         app.
