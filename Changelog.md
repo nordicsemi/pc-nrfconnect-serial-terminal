@@ -1,3 +1,9 @@
+## 1.6.4 - 2026-06-15
+
+### Added
+
+- The nRF54LC10 DK to the list of known devices.
+
 ## 1.6.3 - 2026-04-23
 
 ### Added
