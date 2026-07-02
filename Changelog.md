@@ -1,3 +1,9 @@
+## 1.6.5 - 2026-07-02
+
+### Added
+
+- The nRF54LM20 Dongle to the list of known devices.
+
 ## 1.6.4 - 2026-06-15
 
 ### Added
