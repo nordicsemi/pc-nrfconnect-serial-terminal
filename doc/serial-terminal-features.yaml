@@ -1,0 +1,310 @@
+app:
+  id: serial-terminal
+  name: Serial Terminal
+  repo: pc-nrfconnect-serial-terminal
+
+statuses: [full, unsupported, not_applicable]
+
+general_app_features:
+  - id: select_device
+    name: Select device
+    description: "Select a connected Nordic device from a drop-down list"
+  - id: select_serial_port
+    name: Select serial port
+    description: Select the serial port of the connected device
+  - id: connect_to_port
+    name: Connect to port
+    description: Connect to the selected serial port
+  - id: disconnect_from_port
+    name: Disconnect from port
+    description: Disconnect from the connected serial port
+  - id: auto_reconnect
+    name: "Auto-reconnect"
+    description: Automatically reconnect to the last connected serial port
+  - id: set_baud_rate
+    name: Set baud rate
+    description: Configure the serial connection baud rate
+  - id: set_data_bits
+    name: Set data bits
+    description: Configure the number of data bits
+  - id: set_stop_bits
+    name: Set stop bits
+    description: Configure the number of stop bits
+  - id: set_parity
+    name: Set parity
+    description: "Configure the parity error-checking mode"
+  - id: configure_hardware_flow_control_rts_cts
+    name: Configure hardware flow control (rts/cts)
+    description: Enable or disable RTS/CTS hardware flow control
+  - id: configure_software_flow_control_xon_xoff_xany
+    name: Configure software flow control (xOn/xOff/xAny)
+    description: Configure software flow control signals
+  - id: line_mode
+    name: Line mode
+    description: Send discrete commands with an appended line ending
+  - id: shell_mode
+    name: Shell mode
+    description: Send commands to a device running a shell for execution
+  - id: configure_line_ending
+    name: Configure line ending
+    description: Select the line ending appended to commands (None/LF/CR/CRLF)
+  - id: clear_on_send
+    name: Clear on Send
+    description: Clear the input field after transmitting a command (Line mode)
+  - id: configure_device_echo_shell_mode
+    name: Configure device echo (Shell mode)
+    description: Toggle whether the device or Serial Terminal echoes commands
+  - id: send_command
+    name: Send command
+    description: Type or paste a command and send it to the device
+  - id: command_history_navigation
+    name: Command history navigation
+    description: Navigate previously sent commands with Arrow Up/Down
+  - id: clear_console
+    name: Clear console
+    description: Clear the terminal view
+  - id: ansi_escape_code_support
+    name: ANSI escape code support
+    description: "Render color-coded terminal output using ANSI escape codes"
+  - id: view_logging_output
+    name: View logging output
+    description: Display logging/console output from the connected device
+  - id: save_terminal_session_to_file
+    name: Save terminal session to file
+    description: Save the terminal session output to a file
+  - id: configure_xterm_scrollback_buffer
+    name: Configure XTerm scrollback buffer
+    description: Set the scrollback buffer size for console output, persisted between sessions
+  - id: configure_history_file
+    name: Configure history file
+    description: Set the file storing command history between sessions
+  - id: persist_terminal_input_output
+    name: Persist terminal input/output
+    description: Retain terminal input and output between app sessions
+  - id: shared_serial_port_access
+    name: Shared serial port access
+    description: "Share access to the device's serial port with other nRF Connect for Desktop apps"
+  - id: multi_instance_shared_port_connection
+    name: "Multi-instance shared port connection"
+    description: Allow multiple app instances to connect to the same device and serial port simultaneously
+  - id: serial_settings_sync_across_instances
+    name: Serial settings sync across instances
+    description: "Prompt to overwrite another instance's serial settings when they conflict, and apply the confirmed settings across all instances connected to the port"
+  - id: shared_port_disconnect_handling
+    name: Shared port disconnect handling
+    description: Keep a shared serial port open while other instances still use it, closing it only when the last instance disconnects, with logger messages indicating each state
+  - id: copy_paste_terminal_output
+    name: Copy/paste terminal output
+    description: Select and copy/paste terminal output with the middle mouse button
+  - id: preselect_device_via_command_line_argument
+    name: "Preselect device via command-line argument"
+    description: "Auto-select a device on startup from a serial number passed as a launch argument (--deviceSerial)"
+  - id: preselect_serial_port_via_command_line_argument
+    name: "Preselect serial port via command-line argument"
+    description: "Auto-select a serial port on startup from a port passed as a launch argument (--comPort)"
+  - id: restart_application
+    name: Restart application
+    description: Restart the app via a keyboard shortcut (Ctrl+R / Cmd+R)
+
+device_specific_features:
+  - id: view_at_command_communication
+    name: View AT command communication
+    description: Observe AT communication with the modem in the terminal
+
+shared_features:
+  - id: restore_defaults
+    name: Restore defaults
+    description: "Restore all app's settings to default"
+  - id: give_feedback
+    name: Give Feedback
+    description: Send a feedback message
+  - id: open_documentation
+    name: Open Documentation
+    description: Open external documentation page
+  - id: verbose_logging
+    name: Verbose Logging
+    description: Turn on verbose logging and restart the app
+  - id: create_system_report
+    name: Create system report
+    description: Generate a txt document with detailed report
+  - id: show_log
+    name: Show Log
+    description: Toggle log window
+  - id: autoscroll_log
+    name: Autoscroll log
+    description: Toggle log window autoscroll
+  - id: open_log_file
+    name: Open log file
+    description: Open the current log file in a text editor
+  - id: clear_log
+    name: Clear Log
+    description: Clear the log window
+
+supported_devices:
+  - device: "Nordic Thingy:53"
+    pca: PCA20053
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: "Nordic Thingy:91"
+    pca: PCA20035
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: "Nordic Thingy:91 X"
+    pca: PCA20049
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF52 DK
+    pca: PCA10040
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF52833 DK
+    pca: PCA10100
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF52840 DK
+    pca: PCA10056
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF5340 Audio DK
+    pca: PCA10121
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF5340 DK
+    pca: PCA10095
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF54H20 DK
+    pca: PCA10175
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF54L15 DK
+    pca: PCA10156
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF54LC10 DK
+    pca: PCA10226
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF54LM20 DK
+    pca: PCA10184
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+  
+  - device: nRF54LM20 Dongle
+    pca: PCA10208
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF54LS05 DK
+    pca: PCA10214
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF54LV10 DK
+    pca: PCA10188
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF7002 DK
+    pca: PCA10143
+    verification_version:
+    support:
+      view_at_command_communication: unsupported
+
+  - device: nRF9151 DK
+    pca: PCA10171
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF9151 SMA DK
+    pca: PCA10201
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF9160 DK
+    pca: PCA10090
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF9161 DK
+    pca: PCA10153
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF9251 DK
+    pca: PCA10218
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF93M1 DK
+    pca: PCA10232
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+  - device: nRF93M1 DK
+    pca: PCA10237
+    verification_version:
+    support:
+      view_at_command_communication: full
+
+unsupported_devices:
+  - device: "Nordic Thingy:52"
+    pca: PCA20020
+
+  - device: nPM 1300 EK
+    pca: PCA10152  
+
+  - device: nPM 1304 EK
+    pca: PCA10195
+
+  - device: nPM 2100 EK
+    pca: PCA10170
+
+  - device: nRF51 DK
+    pca: PCA10028
+
+  - device: nRF51 Dongle
+    pca: PCA10031
+
+  - device: nRF52840 Dongle
+    pca: PCA10059
+
+  - device: nRF9131 EK
+    pca: PCA10165
+
+  - device: PPK2
+    pca: PCA63100
+
+    
