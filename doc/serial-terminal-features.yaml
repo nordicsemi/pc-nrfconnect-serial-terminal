@@ -173,7 +173,7 @@ supported_devices:
 
   - device: nRF52840 DK
     pca: PCA10056
-    verification_version:
+    verification_version: 1.4.3
     support:
       view_at_command_communication: unsupported
 
@@ -239,7 +239,7 @@ supported_devices:
 
   - device: nRF9151 DK
     pca: PCA10171
-    verification_version:
+    verification_version: 1.4.3
     support:
       view_at_command_communication: full
 
@@ -251,7 +251,7 @@ supported_devices:
 
   - device: nRF9160 DK
     pca: PCA10090
-    verification_version:
+    verification_version: 1.4.3
     support:
       view_at_command_communication: full
 
