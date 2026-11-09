@@ -106,10 +106,7 @@ general_app_features:
     name: Restart application
     description: Restart the app via a keyboard shortcut (Ctrl+R / Command+R)
 
-device_specific_features:
-  - id: view_at_command_communication
-    name: View AT command communication
-    description: Observe AT communication with the modem in the terminal
+device_specific_features: []
 
 shared_features:
   - id: restore_defaults
@@ -145,164 +142,153 @@ supported_devices:
     pca: PCA20053
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: Nordic Thingy:91
     pca: PCA20035
     verification_version:
     support:
-      view_at_command_communication: full
 
   - device: Nordic Thingy:91 X
     pca: PCA20049
     verification_version:
     support:
-      view_at_command_communication: full
+
+  - device: nPM 1300 EK
+    pca: PCA10152
+    verification_version:
+    support:
+
+  - device: nPM 1304 EK
+    pca: PCA10195
+    verification_version:
+    support:
+
+  - device: nPM 2100 EK
+    pca: PCA10170
+    verification_version:
+    support:
+
+  - device: nRF51 DK
+    pca: PCA10028
+    verification_version:
+    support:
 
   - device: nRF52 DK
     pca: PCA10040
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF52833 DK
     pca: PCA10100
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF52840 DK
     pca: PCA10056
     verification_version: 1.6.3
     support:
-      view_at_command_communication: unsupported
+
+  - device: nRF52840 Dongle
+    pca: PCA10059
+    verification_version:
+    support:
 
   - device: nRF5340 Audio DK
     pca: PCA10121
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF5340 DK
     pca: PCA10095
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54H20 DK
     pca: PCA10175
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54L15 DK
     pca: PCA10156
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54LC10 DK
     pca: PCA10226
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54LM20 DK
     pca: PCA10184
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54LM20 Dongle
     pca: PCA10208
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54LS05 DK
     pca: PCA10214
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF54LV10 DK
     pca: PCA10188
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
   - device: nRF7002 DK
     pca: PCA10143
     verification_version:
     support:
-      view_at_command_communication: unsupported
 
+  - device: nRF9131 EK
+    pca: PCA10165
+    verification_version:
+    support:
+  
   - device: nRF9151 DK
     pca: PCA10171
     verification_version: 1.6.3
     support:
-      view_at_command_communication: full
 
   - device: nRF9151 SMA DK
     pca: PCA10201
     verification_version:
     support:
-      view_at_command_communication: full
 
   - device: nRF9160 DK
     pca: PCA10090
     verification_version: 1.6.3
     support:
-      view_at_command_communication: full
 
   - device: nRF9161 DK
     pca: PCA10153
     verification_version:
     support:
-      view_at_command_communication: full
 
   - device: nRF9251 DK
     pca: PCA10218
     verification_version:
     support:
-      view_at_command_communication: full
 
   - device: nRF93M1 DK
     pca: PCA10232
     verification_version:
     support:
-      view_at_command_communication: full
 
   - device: nRF93M1 DK
     pca: PCA10237
     verification_version:
     support:
-      view_at_command_communication: full
 
 unsupported_devices:
   - device: Nordic Thingy:52
     pca: PCA20020
 
-  - device: nPM 1300 EK
-    pca: PCA10152
-
-  - device: nPM 1304 EK
-    pca: PCA10195
-
-  - device: nPM 2100 EK
-    pca: PCA10170
-
-  - device: nRF51 DK
-    pca: PCA10028
-
   - device: nRF51 Dongle
     pca: PCA10031
-
-  - device: nRF52840 Dongle
-    pca: PCA10059
-
-  - device: nRF9131 EK
-    pca: PCA10165
 
   - device: PPK2
     pca: PCA63100
