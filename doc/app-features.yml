@@ -8,7 +8,7 @@ statuses: [full, unsupported, not_applicable]
 general_app_features:
   - id: select_device
     name: Select device
-    description: "Select a connected Nordic device from a drop-down list"
+    description: Select a connected Nordic device from a drop-down list
   - id: select_serial_port
     name: Select serial port
     description: Select the serial port of the connected device
@@ -19,7 +19,7 @@ general_app_features:
     name: Disconnect from port
     description: Disconnect from the connected serial port
   - id: auto_reconnect
-    name: "Auto-reconnect"
+    name: Auto-reconnect
     description: Automatically reconnect to the last connected serial port
   - id: set_baud_rate
     name: Set baud rate
@@ -32,7 +32,7 @@ general_app_features:
     description: Configure the number of stop bits
   - id: set_parity
     name: Set parity
-    description: "Configure the parity error-checking mode"
+    description: Configure the parity error-checking mode
   - id: configure_hardware_flow_control_rts_cts
     name: Configure hardware flow control (rts/cts)
     description: Enable or disable RTS/CTS hardware flow control
@@ -65,7 +65,7 @@ general_app_features:
     description: Clear the terminal view
   - id: ansi_escape_code_support
     name: ANSI escape code support
-    description: "Render color-coded terminal output using ANSI escape codes"
+    description: Render color-coded terminal output using ANSI escape codes
   - id: view_logging_output
     name: View logging output
     description: Display logging/console output from the connected device
@@ -83,13 +83,13 @@ general_app_features:
     description: Retain terminal input and output between app sessions
   - id: shared_serial_port_access
     name: Shared serial port access
-    description: "Share access to the device's serial port with other nRF Connect for Desktop apps"
+    description: Share access to the device's serial port with other nRF Connect for Desktop apps
   - id: multi_instance_shared_port_connection
-    name: "Multi-instance shared port connection"
+    name: Multi-instance shared port connection
     description: Allow multiple app instances to connect to the same device and serial port simultaneously
   - id: serial_settings_sync_across_instances
     name: Serial settings sync across instances
-    description: "Prompt to overwrite another instance's serial settings when they conflict, and apply the confirmed settings across all instances connected to the port"
+    description: Prompt to overwrite another instance's serial settings when they conflict, and apply the confirmed settings across all instances connected to the port
   - id: shared_port_disconnect_handling
     name: Shared port disconnect handling
     description: Keep a shared serial port open while other instances still use it, closing it only when the last instance disconnects, with logger messages indicating each state
@@ -97,14 +97,14 @@ general_app_features:
     name: Copy/paste terminal output
     description: Select and copy/paste terminal output with the middle mouse button
   - id: preselect_device_via_command_line_argument
-    name: "Preselect device via command-line argument"
-    description: "Auto-select a device on startup from a serial number passed as a launch argument (--deviceSerial)"
+    name: Preselect device via command-line argument
+    description: Auto-select a device on startup from a serial number passed as a launch argument (--deviceSerial)
   - id: preselect_serial_port_via_command_line_argument
-    name: "Preselect serial port via command-line argument"
-    description: "Auto-select a serial port on startup from a port passed as a launch argument (--comPort)"
+    name: Preselect serial port via command-line argument
+    description: Auto-select a serial port on startup from a port passed as a launch argument (--comPort)
   - id: restart_application
     name: Restart application
-    description: Restart the app via a keyboard shortcut (Ctrl+R / Cmd+R)
+    description: Restart the app via a keyboard shortcut (Ctrl+R / Command+R)
 
 device_specific_features:
   - id: view_at_command_communication
@@ -114,7 +114,7 @@ device_specific_features:
 shared_features:
   - id: restore_defaults
     name: Restore defaults
-    description: "Restore all app's settings to default"
+    description: Restore all app's settings to default
   - id: give_feedback
     name: Give Feedback
     description: Send a feedback message
@@ -141,19 +141,19 @@ shared_features:
     description: Clear the log window
 
 supported_devices:
-  - device: "Nordic Thingy:53"
+  - device: Nordic Thingy:53
     pca: PCA20053
     verification_version:
     support:
       view_at_command_communication: unsupported
 
-  - device: "Nordic Thingy:91"
+  - device: Nordic Thingy:91
     pca: PCA20035
     verification_version:
     support:
       view_at_command_communication: full
 
-  - device: "Nordic Thingy:91 X"
+  - device: Nordic Thingy:91 X
     pca: PCA20049
     verification_version:
     support:
@@ -212,7 +212,7 @@ supported_devices:
     verification_version:
     support:
       view_at_command_communication: unsupported
-  
+
   - device: nRF54LM20 Dongle
     pca: PCA10208
     verification_version:
@@ -280,11 +280,11 @@ supported_devices:
       view_at_command_communication: full
 
 unsupported_devices:
-  - device: "Nordic Thingy:52"
+  - device: Nordic Thingy:52
     pca: PCA20020
 
   - device: nPM 1300 EK
-    pca: PCA10152  
+    pca: PCA10152
 
   - device: nPM 1304 EK
     pca: PCA10195
@@ -306,5 +306,3 @@ unsupported_devices:
 
   - device: PPK2
     pca: PCA63100
-
-    
