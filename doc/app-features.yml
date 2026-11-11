@@ -34,7 +34,7 @@ general_app_features:
     name: Set parity
     description: Configure the parity error-checking mode
   - id: configure_hardware_flow_control_rts_cts
-    name: Configure hardware flow control (rts/cts)
+    name: Configure hardware flow control (RTS/CTS)
     description: Enable or disable RTS/CTS hardware flow control
   - id: configure_software_flow_control_xon_xoff_xany
     name: Configure software flow control (xOn/xOff/xAny)
@@ -149,7 +149,7 @@ supported_devices:
     support:
 
   - device: Nordic Thingy:91 X
-    pca: PCA20049
+    pca: PCA20065
     verification_version:
     support:
 
@@ -247,7 +247,7 @@ supported_devices:
     pca: PCA10165
     verification_version:
     support:
-  
+
   - device: nRF9151 DK
     pca: PCA10171
     verification_version: 1.6.3
