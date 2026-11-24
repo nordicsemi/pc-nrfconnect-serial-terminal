@@ -27,6 +27,7 @@ export default ({ updateSerialPort, disabled }: BaudRateProperties) => {
     const serialPort = useSelector(getSerialPort);
 
     const baudRateItems = convertToNumberDropDownItems([
+        12_000_000, 6_000_000, 4_000_000, 3_000_000, 2_000_000, 1_500_000,
         1_000_000, 115200, 57600, 38400, 19200, 9600, 4800, 2400, 1800, 1200,
         600, 300, 200, 150, 134, 110, 75, 50,
     ]);
@@ -46,7 +47,8 @@ export default ({ updateSerialPort, disabled }: BaudRateProperties) => {
                 });
             }}
             value={serialOptions.baudRate}
-            range={{ min: 1, max: 1_000_000, step: 1 }}
+            // treat "max" value as no top limit
+            range={{ min: 1, max: 100_000_000, step: 1 }}
             disabled={disabled}
         />
     );
