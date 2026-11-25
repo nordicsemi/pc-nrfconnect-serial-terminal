@@ -47,8 +47,8 @@ export default ({ updateSerialPort, disabled }: BaudRateProperties) => {
                 });
             }}
             value={serialOptions.baudRate}
-            // treat "max" value as no top limit
-            range={{ min: 1, max: 100_000_000, step: 1 }}
+            // treat "max" value as no top limit; INT_MAX based on `serialport` implementation
+            range={{ min: 1, max: 2_147_483_647, step: 1 }}
             disabled={disabled}
         />
     );
