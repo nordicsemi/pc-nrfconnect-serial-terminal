@@ -2,6 +2,9 @@ tool:
 - name: Serial Terminal app
   link: true
 sections:
+- name: November 2026
+  entries:
+  - "Updated the [Settings tab](./overview.md#settings-tab) section on the [Overview](./overview.md) page with the extended baud rate range."
 - name: February 2026
   entries:
   - "Renamed [Getting started](connecting.md) to [Connecting to a serial port](connecting.md)."

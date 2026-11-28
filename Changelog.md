@@ -1,3 +1,13 @@
+## 1.6.6 - Unreleased
+
+### Added
+
+- Baud Rate presets above 1 Mbaud.
+
+### Removed
+
+- The 1 Mbaud limit for the Baud Rate field.
+
 ## 1.6.5 - 2026-07-02
 
 ### Added
